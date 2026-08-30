@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="CV Thái Minh Cẩm - Marketing, SEO và phát triển nền tảng số"
+    />
+    <title>CV Thái Minh Cẩm</title>
+    <link rel="stylesheet" href="fonts/fontawesome/css/all.css" />
+    <style>
+      :root {
+        --ink: #20262d;
+        --muted: #68727d;
+        --accent: #2e5d52;
+        --soft: #eaf1ef;
+        --line: #dfe4e7;
+        --paper: #fff;
+        --canvas: #edf0f2;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--canvas);
+        font:
+          15px/1.65 -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Arial,
+          sans-serif;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .resume {
+        width: min(1080px, calc(100% - 32px));
+        margin: 32px auto;
+        background: var(--paper);
+        border-radius: 12px;
+        box-shadow: 0 12px 36px rgba(25, 35, 45, 0.09);
+        overflow: hidden;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 148px 1fr;
+        gap: 28px;
+        align-items: center;
+        padding: 38px 42px;
+        border-bottom: 1px solid var(--line);
+      }
+      .portrait {
+        width: 148px;
+        height: 148px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid var(--soft);
+      }
+      h1 {
+        margin: 0;
+        font-size: clamp(30px, 5vw, 44px);
+        line-height: 1.15;
+        letter-spacing: -0.8px;
+      }
+      .role {
+        margin: 8px 0 12px;
+        color: var(--accent);
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .summary {
+        max-width: 720px;
+        margin: 0;
+        color: var(--muted);
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: 300px minmax(0, 1fr);
+      }
+      aside {
+        padding: 32px;
+        background: #f8f9f9;
+        border-right: 1px solid var(--line);
+      }
+      main {
+        min-width: 0;
+        padding: 32px 42px 42px;
+      }
+      section + section {
+        margin-top: 34px;
+      }
+      h2 {
+        margin: 0 0 18px;
+        font-size: 17px;
+        line-height: 1.3;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+      }
+      h2:after {
+        content: "";
+        display: block;
+        width: 36px;
+        height: 3px;
+        margin-top: 8px;
+        background: var(--accent);
+        border-radius: 4px;
+      }
+      h3 {
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.4;
+      }
+      p {
+        margin: 8px 0;
+      }
+      .contact-list,
+      .plain-list,
+      .tag-list,
+      .timeline {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .contact-list li {
+        display: grid;
+        grid-template-columns: 22px 1fr;
+        gap: 9px;
+        margin: 11px 0;
+        overflow-wrap: anywhere;
+      }
+      .contact-list i {
+        margin-top: 5px;
+        color: var(--accent);
+        text-align: center;
+      }
+      .plain-list li {
+        position: relative;
+        margin: 9px 0;
+        padding-left: 17px;
+      }
+      .plain-list li:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.68em;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .tag-list li {
+        padding: 5px 10px;
+        background: var(--soft);
+        color: #244a41;
+        border-radius: 6px;
+        font-size: 13px;
+      }
+      .timeline {
+        position: relative;
+      }
+      .timeline:before {
+        content: "";
+        position: absolute;
+        top: 7px;
+        bottom: 8px;
+        left: 5px;
+        width: 1px;
+        background: var(--line);
+      }
+      .job {
+        position: relative;
+        padding: 0 0 28px 28px;
+      }
+      .job:last-child {
+        padding-bottom: 0;
+      }
+      .job:before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 11px;
+        height: 11px;
+        border: 3px solid var(--accent);
+        border-radius: 50%;
+        background: var(--paper);
+      }
+      .job-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 18px;
+      }
+      .date {
+        flex: 0 0 auto;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .company {
+        margin: 3px 0 8px;
+        color: var(--accent);
+        font-weight: 600;
+      }
+      .job ul {
+        margin: 8px 0 0;
+        padding-left: 19px;
+      }
+      .job li {
+        margin: 4px 0;
+      }
+      .project {
+        padding: 16px 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+      .project + .project {
+        margin-top: 12px;
+      }
+      .project p {
+        color: var(--muted);
+      }
+      footer {
+        padding: 16px 42px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+        text-align: center;
+      }
+      @media (max-width: 760px) {
+        .resume {
+          width: 100%;
+          margin: 0;
+          border-radius: 0;
+          box-shadow: none;
+        }
+        .hero {
+          grid-template-columns: 92px 1fr;
+          gap: 18px;
+          padding: 26px 20px;
+        }
+        .portrait {
+          width: 92px;
+          height: 92px;
+        }
+        .summary {
+          grid-column: 1/-1;
+        }
+        .layout {
+          grid-template-columns: 1fr;
+        }
+        aside {
+          padding: 26px 20px;
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+        main {
+          padding: 28px 20px 36px;
+        }
+        .job-heading {
+          display: block;
+        }
+        .date {
+          display: block;
+          margin-top: 4px;
+          white-space: normal;
+        }
+      }
+      @media (max-width: 420px) {
+        .hero {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .portrait {
+          margin: auto;
+        }
+        .role {
+          font-size: 16px;
+        }
+      }
+      @media print {
+        @page {
+          margin: 12mm;
+        }
+        body {
+          background: #fff;
+          font-size: 11px;
+        }
+        .resume {
+          width: 100%;
+          margin: 0;
+          box-shadow: none;
+          border-radius: 0;
+        }
+        .hero {
+          padding: 20px 24px;
+        }
+        aside,
+        main {
+          padding: 22px 24px;
+        }
+        section + section {
+          margin-top: 22px;
+        }
+        .job {
+          padding-bottom: 18px;
+          break-inside: avoid;
+        }
+        a {
+          color: inherit;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article class="resume">
+      <header class="hero">
+        <img
+          class="portrait"
+          src="images/photo_2024-06-10_02-25-06.jpg"
+          alt="Ảnh chân dung Thái Minh Cẩm"
+        />
+        <div>
+          <h1>Thái Minh Cẩm</h1>
+          <p class="role">Marketing · SEO · Phát triển nền tảng số</p>
+          <p class="summary">
+            Có kinh nghiệm xây dựng nguồn khách hàng, quản lý đội nhóm
+            marketing, SEO website và phát triển ứng dụng. Chủ động lập kế
+            hoạch, làm việc độc lập và chú trọng hiệu quả thực tế.
+          </p>
+        </div>
+      </header>
+      <div class="layout">
+        <aside>
+          <section>
+            <h2>Liên hệ</h2>
+            <ul class="contact-list">
+              <li>
+                <i class="fa-solid fa-phone"></i
+                ><a href="tel:0901816683">090 181 6683 (Zalo)</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i
+                ><a href="mailto:minhcam806@gmail.com">minhcam806@gmail.com</a>
+              </li>
+              <li>
+                <i class="fa-brands fa-telegram"></i
+                ><a href="https://t.me/caamrdev" target="_blank" rel="noopener"
+                  >Telegram: Triệu Kỳ</a
+                >
+              </li>
+              <li>
+                <i class="fa-brands fa-telegram"></i
+                ><a
+                  href="https://t.me/appbetgame"
+                  target="_blank"
+                  rel="noopener"
+                  >Telegram làm app: @appbetgame</a
+                >
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i
+                ><span>Quận 11, TP. Hồ Chí Minh</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-calendar"></i><span>17/12/1988</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-id-card"></i><span>CMND: ***5559</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-passport"></i
+                ><span>Passport: ***8514</span>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Kỹ năng</h2>
+            <ul class="tag-list">
+              <li>SEO</li>
+              <li>Digital Marketing</li>
+              <li>WordPress</li>
+              <li>HTML/CSS</li>
+              <li>Bootstrap</li>
+              <li>Android App</li>
+              <li>Photoshop</li>
+              <li>Camtasia</li>
+              <li>Landing Page</li>
+              <li>Quản lý đội nhóm</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Năng lực</h2>
+            <ul class="plain-list">
+              <li>Hơn 2 năm kinh nghiệm SEO.</li>
+              <li>
+                Quản lý đồng thời nhiều dự án và xây dựng timeline rõ ràng.
+              </li>
+              <li>
+                Chỉnh sửa website WordPress và xử lý HTML, CSS, Bootstrap cơ
+                bản.
+              </li>
+              <li>
+                Xây dựng landing page, ứng dụng và các kênh social phục vụ thu
+                thập data.
+              </li>
+              <li>Tiếng Anh đọc hiểu; tiếng Trung giao tiếp trung bình.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Học vấn</h2>
+            <h3>Cao đẳng</h3>
+            <p class="date">10/2010 – 08/2013</p>
+          </section>
+          <section>
+            <h2>Mục tiêu</h2>
+            <p>
+              Tiếp tục nâng cao chuyên môn marketing, SEO và phát triển nền tảng
+              số; hướng đến vai trò quản lý với tư duy hệ thống và tinh thần
+              trách nhiệm.
+            </p>
+          </section>
+        </aside>
+        <main>
+          <section>
+            <h2>Kinh nghiệm làm việc</h2>
+            <ol class="timeline">
+              <li class="job">
+                <div class="job-heading">
+                  <h3>Phát triển ứng dụng &amp; nền tảng số</h3>
+                  <span class="date">11/2025 – 09/2026</span>
+                </div>
+                <p class="company">Dự án Cao Thủ Soi Số</p>
+                <ul>
+                  <li>
+                    Phát triển và đăng tải ứng dụng Android phục vụ thu thập
+                    data người dùng.
+                  </li>
+                  <li>
+                    Xây dựng, vận hành website và phát triển các kênh social.
+                  </li>
+                  <li>
+                    Website chủ đạo:
+                    <a
+                      href="https://caothusoiso.com"
+                      target="_blank"
+                      rel="noopener"
+                      >caothusoiso.com</a
+                    >.
+                  </li>
+                  <li>
+                    Liên hệ làm app qua Telegram:
+                    <a
+                      href="https://t.me/appbetgame"
+                      target="_blank"
+                      rel="noopener"
+                      >APP BET GAME</a
+                    >.
+                  </li>
+                </ul>
+              </li>
+              <li class="job">
+                <div class="job-heading">
+                  <h3>Nhân viên chăm sóc khách hàng</h3>
+                  <span class="date">08/2024 – 08/2025</span>
+                </div>
+                <p class="company">Rand Hitclub · Go88</p>
+                <ul>
+                  <li>
+                    Tiếp nhận, hỗ trợ và giải đáp các vấn đề của khách hàng.
+                  </li>
+                  <li>
+                    Theo dõi phản hồi, phối hợp xử lý yêu cầu và duy trì trải
+                    nghiệm khách hàng.
+                  </li>
+                </ul>
+              </li>
+              <li class="job">
+                <div class="job-heading">
+                  <h3>Marketing &amp; phát triển thị trường</h3>
+                  <span class="date">03/2019 – 06/2024</span>
+                </div>
+                <p class="company">Tập đoàn Somi</p>
+                <ul>
+                  <li>
+                    <strong>06/2023 – 06/2024:</strong> Tìm kiếm khách hàng, xây
+                    dựng nhóm cộng đồng trên Zalo, Telegram và Facebook.
+                  </li>
+                  <li>
+                    <strong>12/2021 – 06/2023:</strong> Tổ trưởng marketing,
+                    quản lý 18 thành viên; triển khai app Android/iOS, website,
+                    SEO và landing page.
+                  </li>
+                  <li>
+                    <strong>12/2019 – 12/2021:</strong> Tổ trưởng marketing,
+                    quản lý 15 thành viên; đào tạo nhân sự và xây dựng nguồn
+                    data khách hàng.
+                  </li>
+                  <li>
+                    <strong>03/2019 – 12/2019:</strong> Nhân viên marketing, hỗ
+                    trợ mở rộng thị trường.
+                  </li>
+                </ul>
+              </li>
+              <li class="job">
+                <div class="job-heading">
+                  <h3>Nhân viên thu mua</h3>
+                  <span class="date">03/2017 – 02/2019</span>
+                </div>
+                <p class="company">Tập đoàn TLK</p>
+                <p>Thu mua và thực hiện hồ sơ xuất khẩu trái cây.</p>
+              </li>
+              <li class="job">
+                <div class="job-heading">
+                  <h3>Nhân viên vận hành máy CNC</h3>
+                  <span class="date">09/2015 – 10/2017</span>
+                </div>
+                <p class="company">Công ty Tràng An</p>
+              </li>
+              <li class="job">
+                <div class="job-heading">
+                  <h3>Nhân viên vận hành máy phay cơ</h3>
+                  <span class="date">08/2014 – 09/2015</span>
+                </div>
+                <p class="company">Nam Vinh Phát</p>
+              </li>
+            </ol>
+          </section>
+          <section>
+            <h2>Dự án tiêu biểu</h2>
+            <div class="project">
+              <h3>Website &amp; SEO</h3>
+              <p>
+                Tham gia xây dựng website, tối ưu nội dung và triển khai SEO;
+                từng đưa từ khóa KU11/KUBET11 vào top 6 và WINBET vào top 15.
+              </p>
+            </div>
+            <div class="project">
+              <h3>Ứng dụng &amp; landing page</h3>
+              <p>
+                Triển khai ứng dụng Android/iOS, landing page và nội dung hình
+                ảnh phục vụ marketing, chuyển đổi và thu thập data khách hàng.
+              </p>
+            </div>
+          </section>
+        </main>
+      </div>
+      <footer>CV Thái Minh Cẩm · Cập nhật 2026</footer>
+    </article>
+  </body>
+</html>
