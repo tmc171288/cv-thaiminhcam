@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Huỳnh Như — 行政人员个人简历" />
+    <title>CV Huỳnh Như</title>
+    <link rel="stylesheet" href="fonts/fontawesome/css/all.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 26px 6px 8px;
+        background: #a3a3a3;
+        color: #4b4b4b;
+        font-family:
+          "Arial Narrow", Arial, "Microsoft YaHei", "PingFang SC", sans-serif;
+      }
+      .resume {
+        max-width: 1080px;
+        min-height: 1526px;
+        margin: auto;
+        overflow: hidden;
+        border: 2px solid #e4e4e4;
+        border-radius: 13px;
+        background: white;
+        display: flex;
+        flex-direction: column;
+      }
+      .hero {
+        background: #408fca;
+        color: white;
+        padding: 79px 52px 10px;
+      }
+      .identity {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: 194px;
+      }
+      h1 {
+        font-size: 50px;
+        font-weight: 400;
+        margin: 17px 0 19px;
+        line-height: 1.15;
+      }
+      .role {
+        margin: 0;
+        font-size: 28px;
+      }
+      .portrait {
+        width: 171px;
+        height: 171px;
+        border: 3px solid white;
+        border-radius: 12px;
+        overflow: hidden;
+        display: block;
+        background: #e7f0f7;
+        color: #408fca;
+        text-align: center;
+        flex-shrink: 0;
+      }
+      .portrait i {
+        display: block;
+        font-size: 66px;
+        margin-bottom: 8px;
+      }
+      .portrait span {
+        font-size: 13px;
+      }
+      .portrait img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 52%;
+      }
+      .contacts {
+        display: grid;
+        grid-template-columns: 1.9fr 0.9fr 1fr;
+        gap: 5px 28px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 20px;
+        line-height: 1.35;
+      }
+      .contacts li {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+      }
+      .contacts i {
+        width: 22px;
+        text-align: center;
+        flex-shrink: 0;
+      }
+      .contacts a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .email {
+        grid-area: 1 / 1;
+      }
+      .phone {
+        grid-area: 1 / 2;
+      }
+      .birthday {
+        grid-area: 1 / 3;
+      }
+      .facebook {
+        grid-area: 2 / 1;
+      }
+      .gender {
+        grid-area: 2 / 2;
+      }
+      .address {
+        grid-area: 3 / 1 / 4 / 4;
+      }
+      main {
+        padding: 19px 24px 0;
+      }
+      section {
+        margin-bottom: 34px;
+      }
+      h2 {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        color: #242424;
+        font-size: 30px;
+        margin: 0 0 24px;
+        line-height: 1.3;
+      }
+      .section-icon {
+        width: 34px;
+        height: 34px;
+        border: 1px solid #408fca;
+        color: #408fca;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        flex-shrink: 0;
+      }
+      p {
+        font-size: 20px;
+        line-height: 1.6;
+        margin: 0;
+      }
+      .entry {
+        position: relative;
+        padding-top: 32px;
+      }
+      .entry h3 {
+        margin: 0 0 7px;
+        font-size: 22px;
+        padding-right: 210px;
+      }
+      .entry p {
+        line-height: 1.35;
+      }
+      .date {
+        position: absolute;
+        top: 23px;
+        right: 0;
+        font-size: 20px;
+        font-style: italic;
+      }
+      .details {
+        margin-top: 24px;
+      }
+      .details p {
+        line-height: 1.62;
+      }
+      footer {
+        margin-top: auto;
+        padding: 20px 12px 18px;
+        text-align: right;
+        color: #242424;
+        font-size: 18px;
+      }
+      @media (max-width: 650px) {
+        body {
+          padding: 8px;
+        }
+        .resume {
+          min-height: 100vh;
+        }
+        .hero {
+          padding: 28px 22px 20px;
+        }
+        .identity {
+          min-height: 155px;
+          gap: 15px;
+        }
+        h1 {
+          font-size: 34px;
+          margin-top: 10px;
+        }
+        .role {
+          font-size: 23px;
+        }
+        .portrait {
+          width: 108px;
+          height: 108px;
+        }
+        .portrait i {
+          font-size: 40px;
+        }
+        .contacts {
+          display: flex;
+          flex-direction: column;
+          font-size: 16px;
+          gap: 8px;
+          overflow-wrap: anywhere;
+        }
+        main {
+          padding: 22px 18px;
+        }
+        h2 {
+          font-size: 25px;
+          margin-bottom: 18px;
+        }
+        p {
+          font-size: 17px;
+        }
+        .entry {
+          padding-top: 10px;
+        }
+        .entry h3 {
+          padding: 0;
+          font-size: 20px;
+        }
+        .date {
+          position: static;
+          display: block;
+          margin-bottom: 10px;
+          font-size: 16px;
+        }
+      }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      @media print {
+        body {
+          padding: 0;
+          background: white;
+          print-color-adjust: exact;
+          -webkit-print-color-adjust: exact;
+        }
+        .resume {
+          width: 210mm;
+          min-height: 297mm;
+          border: 0;
+          border-radius: 0;
+        }
+        .hero {
+          padding: 14mm 10mm 3mm;
+        }
+        .identity {
+          min-height: 38mm;
+        }
+        h1 {
+          font-size: 34px;
+          margin-top: 10px;
+        }
+        .role {
+          font-size: 21px;
+        }
+        .portrait {
+          width: 32mm;
+          height: 32mm;
+        }
+        .portrait i {
+          font-size: 45px;
+        }
+        .contacts {
+          font-size: 14px;
+          gap: 4px 16px;
+        }
+        main {
+          padding: 5mm;
+        }
+        h2 {
+          font-size: 23px;
+          margin-bottom: 14px;
+        }
+        p,
+        .date {
+          font-size: 15px;
+        }
+        .entry h3 {
+          font-size: 17px;
+        }
+        .entry {
+          padding-top: 20px;
+        }
+        .date {
+          top: 16px;
+        }
+        section {
+          margin-bottom: 24px;
+          break-inside: avoid;
+        }
+        footer {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article class="resume">
+      <header class="hero">
+        <div class="identity">
+          <div>
+            <h1>Huỳnh Như</h1>
+            <p class="role">行政人员</p>
+          </div>
+          <div class="portrait">
+            <img src="images/huynh-nhu.jpg" alt="Ảnh chân dung Huỳnh Như" />
+          </div>
+        </div>
+        <ul class="contacts">
+          <li class="email">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i
+            ><a href="mailto:thangnhu1204@gmail.com">thangnhu1204@gmail.com</a>
+          </li>
+          <li class="phone">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i
+            ><a href="tel:0383948138">0383948138</a>
+          </li>
+          <li class="birthday">
+            <i class="fa-solid fa-cake-candles" aria-hidden="true"></i
+            ><span>11/12/1996</span>
+          </li>
+          <li class="facebook">
+            <i class="fa-brands fa-facebook-square" aria-hidden="true"></i
+            ><a href="https://www.facebook.com/nhulyn09">fb.com/nhulyn09</a>
+          </li>
+          <li class="gender">
+            <i class="fa-solid fa-venus-mars" aria-hidden="true"></i
+            ><span>女</span>
+          </li>
+          <li class="address">
+            <i class="fa-solid fa-house" aria-hidden="true"></i
+            ><span>Ben Phu Lam, 第六区, 胡志明</span>
+          </li>
+        </ul>
+      </header>
+      <main>
+        <section>
+          <h2>
+            <span class="section-icon"
+              ><i class="fa-solid fa-flag" aria-hidden="true"></i></span
+            >職業目標
+          </h2>
+          <p>
+            希望能应聘贵公司的客服岗位,进一步提升沟通与危机处理能力,为客户提供优质的服务体验。渴望在专业、有活力的环境中工作,不断学习并寻求长期稳定的发展。
+          </p>
+        </section>
+        <section>
+          <h2>
+            <span class="section-icon"
+              ><i class="fa-solid fa-briefcase" aria-hidden="true"></i></span
+            >工作經驗
+          </h2>
+          <div class="entry">
+            <span class="date">04/2019 - 07/2025</span>
+            <p><strong>我有4年担任Kefu的工作经验。</strong></p>
+          </div>
+        </section>
+        <section>
+          <h2>
+            <span class="section-icon"
+              ><i class="fa-regular fa-lightbulb" aria-hidden="true"></i></span
+            >教育
+          </h2>
+          <div class="entry">
+            <span class="date">08/2015 - 06/2018</span>
+            <h3>胡志明市经济科技职业学院</h3>
+            <p>信息技术专业</p>
+            <p>毕业等级:良好 (Good)</p>
+          </div>
+        </section>
+        <section>
+          <h2>
+            <span class="section-icon"
+              ><i class="fa-solid fa-pencil" aria-hidden="true"></i></span
+            >更多信息
+          </h2>
+          <div class="details">
+            <p>
+              chưa
+              <strong>个人优势:</strong
+              >擅长沟通与倾听,能准确理解客户需求;抗压能力强,具备出色的时间管理与团队协作能力。
+            </p>
+            <p>
+              <strong>个人不足:</strong
+              >追求完美,偶尔会花费较多时间反复复核工作,但这也极大降低了工作中的失误率。
+            </p>
+            <p><strong>人际交往:</strong>适应能力强,能迅速融入新的工作环境。</p>
+            <p><strong>办公软件:</strong>富打熟练,精通 Word 排版与文档处理。</p>
+            <p><strong>语言能力:</strong></p>
+            <p>中文:中级(听、说、读、写)</p>
+            <p>英文:中级</p>
+          </div>
+        </section>
+      </main>
+    </article>
+  </body>
+</html>
