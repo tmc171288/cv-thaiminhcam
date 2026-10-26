@@ -16,7 +16,8 @@ body {
   background: #f3f4f0;
   color: var(--ink);
   font:
-    15px/1.7 -apple-system,
+    15px/1.7 "Be Vietnam Pro",
+    -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
     Arial,
@@ -446,7 +447,7 @@ footer {
 .language-switcher { display: flex; gap: 4px; margin-left: auto; }
 .language-switcher a { display: inline-flex; align-items: center; justify-content: center; min-width: 36px; min-height: 36px; padding: 4px 8px; border-radius: 4px; font-size: 12px; color: var(--muted); }
 .language-switcher a[aria-current="page"] { background: var(--accent); color: white; font-weight: 700; }
-:lang(zh-CN) body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif; }
+:lang(zh-CN) body { font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif; }
 :lang(zh-CN) h1, :lang(zh-CN) h2, :lang(zh-CN) .eyebrow, :lang(zh-CN) .tag { letter-spacing: normal; }
 @media (max-width: 440px) {
   .topbar > nav { width: 100%; justify-content: space-between; }
